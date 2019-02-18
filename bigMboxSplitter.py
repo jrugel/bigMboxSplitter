@@ -20,6 +20,7 @@ with open(MboxFile) as infile:
             else:
                 f.close()
                 print('\tOK', end='\n', flush=True)
+            
             DestinationFolder = "{ChunksFolder}/{year}/{month}/{day}".format(ChunksFolder=ChunksFolder, year=match.group(7), month=match.group(4), day=match.group(5))
             DestinationFile = "{DestinationFolder}/{FileName}.eml".format(DestinationFolder=DestinationFolder, FileName=match.group(1))
 
